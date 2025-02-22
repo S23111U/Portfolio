@@ -83,9 +83,9 @@ function CustomNavbar() {
   }, [location.pathname, setNavBarTitle]);
 
   return (
-    <Navbar isBordered className="custom-navbar">
+    <Navbar maxWidth="full" className="custom-navbar">
       <NavbarContent justify="start">
-        <NavbarBrand className="mr-4">
+        <NavbarBrand className="custom-navbar-brand">
           <Dropdown backdrop="blur">
             <DropdownTrigger>
               <button>
@@ -149,9 +149,11 @@ function CustomNavbar() {
             </DropdownMenu>
           </Dropdown>
         </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent justify="center">
         <p className="font-roboto">{navbartitle}</p>
       </NavbarContent>
-      <NavbarContent as="div" className="items-center" justify="end">
+      <NavbarContent justify="end">
         <Input
           classNames={{
             base: "max-w-full sm:max-w-[10rem] h-10",

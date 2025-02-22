@@ -6,3 +6,6 @@
 .custom-navbar {
   background-color: #086fd6;
 }
+.custom-navbar-brand {
+  position: left;
+}
