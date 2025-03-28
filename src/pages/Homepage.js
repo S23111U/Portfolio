@@ -2,12 +2,9 @@ import ShadowButton from "../components/Button";
 import { useState } from "react";
 import "./Homepage.css";
 import CustomNavbar from "../components/Navbar";
-import {
-  Card,
-  Image,
-  CardFooter,
-} from "@heroui/react";
+import { Card, Image, CardFooter } from "@heroui/react";
 import photo from "../assets/Passport_photo.jpg";
+import { Helmet } from "react-helmet";
 
 function HomePage() {
   const [h1text, setH1Text] = useState("Welcome!");
@@ -29,6 +26,21 @@ function HomePage() {
 
   return (
     <>
+      <Helmet>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-276LM1RPD4"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-276LM1RPD4');
+          `}
+        </script>
+      </Helmet>
       <div>
         <CustomNavbar />
       </div>
